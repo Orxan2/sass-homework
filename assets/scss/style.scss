@@ -46,9 +46,20 @@ body {
         height: 600px;
 
         h1 {
-            font-size: 48px !important;
+            font-size: 48px;
             line-height: 72px;
         }
+
+        a{
+            transition: all .2s linear;
+            color: $text-blue;
+
+            &:hover{
+                transform: scale(1.05);
+                color: $text-neon-blue;
+            }
+        }
+        
     }
 
     .image-box {
@@ -167,8 +178,8 @@ body {
 @media screen and (max-width:768px){
     section#home{
         h1{
-            font-size: 16px !important;
-            line-height: 1;
+            font-size: 20px !important;
+            line-height: 1.2 !important;
         }
     }
 }
