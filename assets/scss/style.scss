@@ -1,0 +1,165 @@
+@import "colors";
+@import "reset";
+
+body {
+    ul.dropdown-menu {
+        display: none;
+    }
+
+    li.list-group-item {
+        transition: color 0.2s linear;
+
+        a {
+            color: $text-dark;
+            transition: color 0.2s linear;
+        }
+
+        &:hover {
+            p {
+                color: $text-blue;
+            }
+        }
+
+        &.dropdown:hover {
+            ul.dropdown-menu {
+                display: flex;
+                justify-content: space-between;
+                position: absolute;
+                top: 100%;
+                transform: translateX(-50%);
+
+                li:hover {
+                    a {
+                        color: $text-blue;
+                    }
+                }
+            }
+        }
+    }
+
+    section#home {
+        background-image: url(../img/HomeBannerJuly.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        // background-attachment: ;
+        height: 600px;
+
+        h1 {
+            font-size: 48px !important;
+            line-height: 72px;
+        }
+    }
+
+    .image-box {
+        height: 650px;
+        overflow: hidden;
+        cursor: pointer;
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transition: all 0.4s linear;
+
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #00000030;
+            background-blend-mode: color-burn;
+
+            &.image1 {
+                background-image: url(../img/image1.webp);
+            }
+            &.image2 {
+                background-image: url(../img/image2.webp);
+            }
+            &.image3 {
+                background-image: url(../img/image3.webp);
+            }
+            &.image4 {
+                background-image: url(../img/image4.webp);
+            }
+            &.image5 {
+                background-image: url(../img/image5.webp);
+            }
+        }
+        h4 {
+            font-size: 22px;
+        }
+        &:hover {
+            .overlay {
+                transform: scale(1.05);
+                background-color: #00000080;
+            }
+        }
+    }
+
+    section#cards {
+        background-color: #edf2f5;
+
+        .card {
+            .card-header {
+                .card-image {
+                    transition: all 0.2s linear;
+
+                    overflow: hidden;
+
+                    img {
+                        transition: all 0.2s linear;
+                    }
+                    &:hover {
+                        box-shadow: 0 15px 30px 10px $box-shadow-color;
+
+                        img {
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+
+            h2 {
+                font-size: 22px;
+                margin-bottom: 16px;
+            }
+
+            p {
+                font-size: 15px;
+                line-height: 24px;
+            }
+        }
+    }
+
+    footer{
+        background-color: $bg-navy;
+
+       
+       li.list-group-item{
+            background-color: transparent !important;
+
+           a.social-icon{
+               display: flex;
+               justify-content: center;
+               align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 1px solid #6c6c6c;
+            color: $text-white;
+            transition: all .2s linear;
+
+            &:hover{
+                background-color: $text-white;
+                border-color: $text-white;
+                color: $bg-navy;
+            }
+        }
+       }
+
+       .very-little{
+           font-size: 8px;
+       }
+    }
+}
